@@ -1,0 +1,11 @@
+#to get top 3 student marks
+n=int(input("Enter number of students"))
+stud_list=[]
+for i in range(n):
+    m=(float(input("Enter the Marks")))
+    stud_list.append(m)
+
+stud_list.sort(reverse=True)
+
+print("Top 3 students are ")  
+print(stud_list[:3])    

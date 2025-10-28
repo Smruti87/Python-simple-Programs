@@ -1,0 +1,14 @@
+n=int(input("Enter the limit"))
+number=[]
+even=0
+odd=0
+for i in range(n):
+    num=int(input("Enter the Number: "))
+    number.append(num)
+for i in range(n):
+    if((number[i]%2)==0):
+        even=even+1
+    else:
+        odd=odd+1
+print("Total Even Numbers are",even)
+print("Total odd numbers are",odd)
