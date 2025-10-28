@@ -1,0 +1,15 @@
+import random 
+
+n=int(random.randrange(1,100))
+print("Enter the Number from 1 to 100")
+guess=int(input())
+while n!=guess:
+    if guess<n:
+        print("Too Low Guess Again!")
+        guess=int(input("Enter the NUmber Again"))
+    elif guess>n:
+        print("Too High Guess Again!")
+        guess=int(input("Enter the NUmber Again"))
+    else:
+        break
+print("Correct Guess")
