@@ -1,0 +1,20 @@
+print("Enter the Sentence : \n")
+str=input()
+newdict={}
+j=0
+val=""
+count=0
+for i in str.split(" "):
+    newdict[j]=i.lower()
+    j=j+1
+
+print("Enter the Key to be searched")
+word=input().lower()
+for values in newdict.values():
+        if word in values:
+              count=count+1
+
+    
+
+print(f'The word', {word} ,'has appered ',{count},'Time in the Sentence given')
+  
