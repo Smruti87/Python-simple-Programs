@@ -1,0 +1,31 @@
+#reading from user and creating a dict
+#print("Select the choice")
+#print("1.Enter the data to file\n2.Read from file \n3.file accessing and finding hights\n4.finding Avarage")
+#ch=int(input("Enter the choice"))
+
+stud={}
+stud1={}
+n=int(input("Enter the number of entries"))
+for i in range(n):
+    name=input("Enter the student name")
+    marks=float(input("Enter the Marks"))
+    stud[name]=marks
+#print(stud)
+#writing to a file as a dict
+with open("student.txt","w")as file:
+    for name ,marks in stud.items():
+        file.write(f"{name}:{marks}\n")
+
+with open ("student.txt","r")as file:
+    for line in file:
+        n,m =line.strip().split(":")
+        stud1[n]=float(m)
+print(stud1)
+#printing the average and topper
+total=0.0
+for val in stud1.values():
+    total=total+val
+avg=total/len(stud1)
+print("The average marks are ",avg)
+print(f'The topper is',{max(stud1)})
+
